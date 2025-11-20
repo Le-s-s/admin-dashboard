@@ -33,40 +33,71 @@
 }
 
 .projects, .right-side {
-    
+    padding:20px;
     background-color:grey;
     display:flex;
     flex-direction:column;
-    padding:15px;
+    padding-top:50px;
+}
+
+.projects{
+    
 }
 
 .right-side {
     gap:70px;
 }
 
-.message-announce {
+.message-announce, .name-trend {
+    display:flex;
+    flex-direction:column;
+    padding:30px;
+    justify-content:center;
+    align-items:center;
     margin-top:20px;
-    height:600px;
+    margin-bottom:5px;
+    height:45.7rem;
     background-color:white;
 }
 
-.name-trend {
+.cards-proj {
     margin-top:20px;
-    background-color:white;
-    height:600px;
-}
-
-.cards-proj {   
-    margin-top:20px;
+    margin-bottom:40px;
     display:grid;
-    gap:70px;
+    gap:50px;
     grid-template-columns: repeat(2, minmax(200px,1fr));
 }
 
 .card {
-    
+    padding:50px;
+    gap:250px;
     display:flex;
+    justify-content:flex-start;
     flex-direction:column;
     background-color:white;
     height:400px;
+}
+
+.card-buttons {
+    display:flex;
+    justify-content:flex-end;
+    gap:20px;
+}
+
+.navigation {
+    display:flex;
+    flex-direction:column;
+    gap:8rem;
+    padding:20px;
+    text-align:start;
+}
+
+.navigation a {
+    font-size:3rem;
+    color:white;
+}
+
+.nav-logo {
+    font-size:1.5rem;
+    color:white;
 }
