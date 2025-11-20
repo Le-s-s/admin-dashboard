@@ -1,4 +1,72 @@
 *{
     padding: 0;
     margin: 0;
+    
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows:1fr 5fr;
+    height:100vh;
+}
+
+.navigation{
+    background-color: blue;
+    grid-row:1/3;
+}
+
+.control {
+    display:flex;
+    grid-column:2/4;
+    flex-direction:column;
+}
+
+.top-con{
+    display:flex;
+    justify-content:space-between;
+}
+
+.bot-con{
+    display:flex;
+    justify-content:space-between;
+}
+
+.projects, .right-side {
+    
+    background-color:grey;
+    display:flex;
+    flex-direction:column;
+    padding:15px;
+}
+
+.right-side {
+    gap:70px;
+}
+
+.message-announce {
+    margin-top:20px;
+    height:600px;
+    background-color:white;
+}
+
+.name-trend {
+    margin-top:20px;
+    background-color:white;
+    height:600px;
+}
+
+.cards-proj {   
+    margin-top:20px;
+    display:grid;
+    gap:70px;
+    grid-template-columns: repeat(2, minmax(200px,1fr));
+}
+
+.card {
+    
+    display:flex;
+    flex-direction:column;
+    background-color:white;
+    height:400px;
 }
