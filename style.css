@@ -119,8 +119,7 @@
 }
 
 .right-side {
-    
-    gap:70px;
+    gap:4.375rem;
 }
 
 .message-announce, .name-trend {
@@ -133,6 +132,14 @@
     margin-top:1rem;
     height:45.7rem;
     background-color:white;
+}
+
+.message-announce div {
+    height: 30%;
+}
+
+.name-trend div {
+    height: 20%;
 }
 
 .cards-proj {
