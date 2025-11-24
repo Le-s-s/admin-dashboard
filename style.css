@@ -4,11 +4,15 @@
     
 }
 
+:root{
+    background-color:grey;
+}
 .container{
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows:1fr 6fr;
-
+    height:100vh;
+    width:100vw;
 }
 
 .navigation{
@@ -17,24 +21,93 @@
 }
 
 .control {
+    background-color:white;
     display:flex;
     grid-column:2/4;
     flex-direction:column;
+    justify-content:space-between;
+    z-index:1;
+    box-shadow:5px 0px 0px 10px rgba(0,0,0, 10%)
 }
 
 .top-con{
     display:flex;
     justify-content:space-between;
+    align-items:center;
+    gap:6rem;
+    padding:2rem;
+    height:4rem;
+}
+
+.user {
+    display:flex;
+    height:100%;
+    width:20%;
+    gap:3rem;
+}
+
+.user p {
+    align-self:center;
+}
+
+.search {
+    display:flex;
+    width:70%;
+    gap:2rem;
+}
+
+.search input{
+    height:2.5rem;
+    width:100%;
+    border-radius:3rem;
+    background:gray;
 }
 
 .bot-con{
     display:flex;
     justify-content:space-between;
+    align-items:center;
+    padding:2rem;
+    height:7rem;
+    
+}
+
+.buttons-con {
+    display:flex;
+    gap:2rem;
+    width:24%;
+    height:100%;
+    align-items:center;
+}
+
+.interact-con {
+    display:flex;
+    gap:2rem;
+    height:100%;
+    width:40%;
+}
+
+.welcome-con{
+    align-self:center;
+    font-size:1.5rem;
+}
+
+
+.buttons-con button{
+    align-content:center;
+    font-size:1rem;
+    padding:1rem;
+    height:50%;
+    width:30%;
+    color:white;
+    background:blue;
+    border-radius:3rem;
+
 }
 
 .projects, .right-side {
     padding:1rem;
-    background-color:grey;
+    
     display:flex;
     flex-direction:column;
     padding-top:2.5rem;
@@ -42,13 +115,16 @@
 
 .projects{
     
+    
 }
 
 .right-side {
+    
     gap:70px;
 }
 
 .message-announce, .name-trend {
+    border-radius:1.5em;
     display:flex;
     flex-direction:column;
     padding:2rem;
@@ -65,9 +141,11 @@
     display:grid;
     gap:3.125rem;
     grid-template-columns: repeat(2, minmax(200px,1fr));
+    
 }
 
 .card {
+    border-radius:1.5em;
     padding:3.125rem;
     gap:18rem;
     display:flex;
@@ -75,6 +153,7 @@
     flex-direction:column;
     background-color:white;
     height:27.5rem;
+    overflow-y:hidden;
 }
 
 .card-buttons {
@@ -87,16 +166,25 @@
     display:flex;
     flex-direction:column;
     gap:8rem;
-    padding:2rem;
+    padding:1rem;
     text-align:start;
 }
 
+.nav-item{
+    display:flex;
+    gap:1rem;
+    width:2rem;
+}
+
 .navigation a {
-    font-size:3rem;
+    font-size:1.3rem;
     color:white;
 }
 
 .nav-logo {
-    font-size:1.5rem;
+    gap:1rem;
+    font-size:0.8rem;
     color:white;
+    display:flex;
+    width:2rem;
 }
