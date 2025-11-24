@@ -12,7 +12,7 @@
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows:1fr 6fr;
     height:100vh;
-    width:100vw;
+    
 }
 
 .navigation{
@@ -27,7 +27,11 @@
     flex-direction:column;
     justify-content:space-between;
     z-index:1;
-    box-shadow:5px 0px 0px 10px rgba(0,0,0, 10%)
+    
+}
+
+.control, .card, .message-announce, .name-trend {
+    box-shadow:5px 0px 0px 10px rgba(0,0,0, 10%);
 }
 
 .top-con{
@@ -107,27 +111,27 @@
 
 .projects, .right-side {
     padding:1rem;
-    
     display:flex;
     flex-direction:column;
     padding-top:2.5rem;
+    height:100%;
 }
 
 .projects{
-    
-    
+    padding-left:2rem;
 }
 
 .right-side {
-    gap:4.375rem;
+    display:flex;
+    justify-content:space-between;
 }
 
 .message-announce, .name-trend {
     border-radius:1.5em;
     display:flex;
     flex-direction:column;
-    padding:2rem;
-    justify-content:center;
+    padding:1rem;
+    justify-content:space-around;
     align-items:center;
     margin-top:1rem;
     height:45.7rem;
@@ -135,7 +139,10 @@
 }
 
 .message-announce div {
-    height: 30%;
+    justify-items:center;
+    height:30%;
+    width:100%;
+    gap:2rem;
 }
 
 .name-trend div {
@@ -144,23 +151,24 @@
 
 .cards-proj {
     margin-top:1rem;
-    margin-bottom: 2rem;
     display:grid;
     gap:3.125rem;
     grid-template-columns: repeat(2, minmax(200px,1fr));
+    height:100%;
     
 }
 
 .card {
     border-radius:1.5em;
     padding:3.125rem;
-    gap:18rem;
+    gap:60%;
     display:flex;
     justify-content:flex-start;
     flex-direction:column;
     background-color:white;
-    height:27.5rem;
+    height:80%;
     overflow-y:hidden;
+    box-shadow:-1rem 0rem orange, 0px 10px rgba(0,0,0, 10%);
 }
 
 .card-buttons {
@@ -173,25 +181,27 @@
     display:flex;
     flex-direction:column;
     gap:8rem;
-    padding:1rem;
+
+    height:100%;
     text-align:start;
+    padding:2rem;
 }
 
 .nav-item{
     display:flex;
     gap:1rem;
-    width:2rem;
+    width:15%;
 }
 
 .navigation a {
-    font-size:1.3rem;
+    font-size:3rem;
     color:white;
 }
 
 .nav-logo {
     gap:1rem;
-    font-size:0.8rem;
+    font-size:2rem;
     color:white;
     display:flex;
-    width:2rem;
+    width:20%;
 }
