@@ -6,6 +6,9 @@
 
 :root{
     background-color:grey;
+    --card-text-weight: font-weight:400;
+    --card-text-size: clamp(10px,0.8vw,150%);
+    
 }
 .container{
     display: grid;
@@ -13,6 +16,7 @@
     grid-template-rows:1fr 6fr;
     height:100vh;
     width:100vw;
+    
 }
 
 .navigation{
@@ -51,23 +55,25 @@
 .user {
     display:flex;
     height:100%;
-    width:25%;
-    gap:8%;
+    width:29%;
+    gap:10%;
 }
 
 .user p {
     align-self:center;
     font-size:200%;
+    font-weight:bold;
 }
 
 .search {
     display:flex;
-    width:65%;
+    width:60%;
+    padding-left:2%;
 }
 
 .search input{
     width:100%;
-    height:2.5vh;
+    height:3vh;
     border-radius:10vh;
     background:gray;
 }
@@ -78,37 +84,42 @@
     align-items:center;
     width:100%;
     height:60%;
-    gap:20%;
+    gap:45%;
 }
 
 .buttons-con {
     display:flex;
-    width:24%;
     height:100%;
     gap:10%;
     align-items:center;
-    justify-content:center;
+    justify-content:start;
     width:30%
+}
+
+.buttons-con button{
+    font-size:large;
 }
 
 .interact-con {
     display:flex;
     height:100%;
-    width:30%;
+    gap:9%;
 }
 
 .welcome-con{
     align-self:center;
     font-size:1.5rem;
+    font-weight:bold;
 }
 
 
 .buttons-con button{
-    height:30%;
-    width:30%;
+    height: 32%;
+    width:35%;
     border-radius:2vw;
     align-content:center;
-    font-size:1rem;
+    font-size:150%;
+    font-weight:bold;
     color:white;
     background:blue;
 
@@ -119,7 +130,7 @@
     flex-direction:column;
     justify-content:center;
     height:80vh;
-    row-gap:3%;
+    row-gap:1%;
 }
 
 .right-side,.projects{
@@ -127,61 +138,93 @@
 }
 
 .right-side {
-    row-gap:6%;
+    row-gap:7%;
     display:flex;
     flex-direction:column;
-    justify-content:space-around;
-    height:78vh;
+    justify-content:center;
+    height:80vh;
     padding-left:7%;
     padding-right:7%;
 }
 
 .announcements{
-    row-gap:7%;
+    row-gap:3%;
+    height:45%;
     display:flex;
     flex-direction:column;
 }
 
 .trending{
     display:flex;
-    row-gap:7%;
+    row-gap:3%;
+
     flex-direction:column;
+    
+}
+
+.message-announce{
+    flex-direction:column;
+    
 }
 
 .message-announce, .name-trend {
-    
+    font-size:var(--card-text-size);
+    font-weight:var(--card-text-weight);
     display:flex;
-    border-radius:1.5%;
     flex-direction:column;
-    padding:1%;
+    border-radius:1.5%;
     justify-content:space-around;
     align-items:center;
     background-color:white;
     height:30vh;
     width:100%;
+    flex-wrap:wrap;
 }
 
 .message-announce div {
-    justify-items:center;
+    overflow:hidden;
+    
     height:30%;
-    width:100%;
+    width:90%;
+    padding-left:10%
 }
+
+.message-announce div p{
+    text-overflow: ellipsis;
+}
+
 
 .name-trend div {
     height: 20%;
+
+}
+
+.trend-list{
+    display:flex;
+    flex-direction:row;
+    gap:20%;
+    align-self:flex-start;
+    padding-left:10%
+}
+
+.trend-info{
+    display:flex;
+    flex-direction:column;
+    align-self:center;
+    justify-content:center;
 }
 
 .cards-proj {
     height:88%;
     display:grid;
-    gap:2.7%;
+    gap:3%;
     grid-template-columns: repeat(2, minmax(200px,1fr));
     justify-items:center;
 }
 
 .card {
     border-radius:1.5%;
-    gap:5%;
+    gap:4%;
     display:flex;
     background-color:white;
     overflow-y:hidden;
@@ -197,22 +240,31 @@
 }
 
 .card-line{
-    width:10%;
+    width:5%;
     background-color:orange;
 }
 
 .card-text{
     display:flex;
     flex-direction:column;
-    justify-content:flex-start;
+    justify-content:center;
     width:90%;
-    height:60%
+    height:90%;
+    gap:5%;
 }
+
+.card-text p{
+    color:black;
+    font-weight:var(--card-text-weight);
+    font-size:var(--card-text-size);
+}
+
 .card-buttons {
     display:flex;
     justify-content:flex-end;
     gap:4%;
     padding:5%;
+    height:15%;
 }
 
 .navigation {
@@ -221,18 +273,18 @@
     align-items:center;
     gap:8%;
     height:100vh;
-    width:20vw;
-    
+    padding:8%;
 }
 
 .nav-item{
-    
+    width:clamp(10px,3rem,100%);
+    font-size:clamp(40px,3rem,100%);
     display:flex;
-    gap:8%
+    gap:1vw;
 }
 
 .nav-item img{
-    width:10%;
+    width:100%;
 }
 
 .nav-manage,.nav-settings{
@@ -242,7 +294,7 @@
 
 .navigation a {
     text-decoration:none;
-    font-size:300%;
+    
     color:white;
 }
 
@@ -275,6 +327,33 @@
 
 .bell-con{
     background-image: url(./images/bell-ring-outline.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width:8%;
+    background-color:white;
+    border-style:none;
+}
+
+.star-card{
+    background-image: url(./images/star-plus-outline.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width:10%;
+    background-color:white;
+    border-style:none;
+}
+
+.share-card{
+    background-image: url(./images/eye-plus-outline.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width:10%;
+    background-color:white;
+    border-style:none;
+}
+
+.watch-card{
+    background-image: url(./images/source-branch.svg);
     background-repeat: no-repeat;
     background-position: center;
     width:10%;
